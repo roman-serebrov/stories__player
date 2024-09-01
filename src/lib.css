@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/*
+  timeline
+*/
+
+.timeline {
+    display: flex;
+    margin: 5px 0;
+}
+
+.timeline-chunk-active > .timeline-chunk-inner,
+.timeline-chunk-active ~ .timeline-chunk > .timeline-chunk-inner {
+    width: 0;
+}
+
+.timeline-chunk {
+    background-color: #717171;
+    height: 3px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.timeline-chunk + .timeline-chunk {
+    margin-left: 3px;
+}
+
+.timeline-chunk-inner {
+    height: inherit;
+    background-color: #ffffff;
+    border-radius: inherit;
+}
+
+/*
+    player
+*/
+
+.player-content-wrapper {
+    position: relative;
+    background-color: #000000;
+    height: 495px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.player-chunk-switcher {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    z-index: 10;
+}
+
+.player-chunk-next, .player-chunk-prev {
+    cursor: pointer;
+    top:0;
+}
+
+.player-chunk-prev {
+    left: 0;
+}
+
+.player-chunk-next {
+    right: 0;
+}
+
+.player-chunk-next:hover {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавьте тень при наведении */
+}
+
+.player-chunk-prev:hover {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавьте тень при наведении */
+}
+
+.player-content {
+    margin: auto;
+}
+
+.player-content img {
+    position: relative;
+    max-width: 100%; 
+    height: auto;
+}
+
+.player-chunk {
+    display: none;
+}
+
+.player-chunk-active {
+    display: block;
+}
+
+.player-chunk-overlay {
+    position: absolute;
+    user-select: none;
+    z-index: 15;
+}
+
+
+@keyframes scale {
+    50%{
+        transform: scale(2);
+    }
+}
+
+
+.watercolor {
+    color: #ffffff;
+    background: url("./image/blue-watercolor-brus.png") no-repeat center;
+    background-size: contain;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}
+/*
+    questions
+*/
+.question {
+    color: #000000;
+    font-size: 15px;
+    background-color: #ffffff;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.question-answer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question-answer > button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #dddcdc;
+    color: #000000;
+    height: 25px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.question-answer > button + button {
+    border-top: 0.5px solid #ffffff;
+    margin-bottom: 5px;
+}
+

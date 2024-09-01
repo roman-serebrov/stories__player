@@ -1,0 +1,16 @@
+@import "./src/lib.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+}
+#app {
+  width: 370px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
